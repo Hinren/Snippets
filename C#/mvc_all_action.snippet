@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>HttpGet</Title>
+			<Author>Patryk Wiśniewski</Author>
+			<Description>Create all action (asp.net)</Description>
+			<Shortcut>mvc_all_action</Shortcut>
+		</Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>QueryName</ID>
+                    <ToolTip>Replace with proper query.</ToolTip>
+                    <Default>IQuery</Default>
+                </Literal>
+                <Literal>
+                    <ID>MethodName</ID>
+                    <ToolTip>Replace with method name You want to use.</ToolTip>
+                    <Default>Name</Default>
+                </Literal>
+                <Object>
+                    <ID>Route</ID>
+                    <Type>string</Type>
+                    <ToolTip>Replace with a proper Route.</ToolTip>
+                    <Default>Route</Default>
+                </Object>
+            </Declarations>
+            <Code Language="CSharp">
+	
+<![CDATA[HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ActionName()
+        {
+            if (ModelState.IsValid)
+            {
+                return View();
+            }
+            else
+            {
+                SetMessageWarning("", ModelState.Values.SelectMany(v => v.Errors).Where(me => me != null).Select(me => me.ErrorMessage));
+                return View();
+            }
+        }
+
+
+        [HttpPut]
+        [ValidateAntiForgeryToken]
+        public ActionResult ActionName()
+        {
+            if (ModelState.IsValid)
+            {
+                return View();
+            }
+            else
+            {
+                SetMessageWarning("", ModelState.Values.SelectMany(v => v.Errors).Where(me => me != null).Select(me => me.ErrorMessage));
+                return View();
+            }
+        }
+
+        [HttpDelete]
+        public ActionResult ActionName()
+        {
+            if (ModelState.IsValid)
+            {
+                return View();
+            }
+            else
+            {
+                SetMessageWarning("", ModelState.Values.SelectMany(v => v.Errors).Where(me => me != null).Select(me => me.ErrorMessage));
+                return View();
+            }
+        }
+
+        [HttpGet]
+        public ActionResult ActionName()
+        {
+
+            return View(userRegister);
+        }]]>	
+              
+            </Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
