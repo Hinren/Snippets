@@ -2,7 +2,7 @@
 <CodeSnippets>
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>HttpGet</Title>
+			<Title>SqlDataReader</Title>
 			<Author>Patryk Wiśniewski</Author>
 			<Description>Create SqlConnection SqlCOmmand, SqlDataReader</Description>
 			<Shortcut>cs</Shortcut>
@@ -28,19 +28,21 @@
             </Declarations>
             <Code Language="CSharp">
               
-<![CDATA[string querry = "";
-
-            using (SqlConnection connection = new SqlConnection(CreateConnectionString()))
+<![CDATA[
+         string querry = "";
+         string connectionString = "";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(querry,  connection ))
                 {
+                    command.Parameters.Clear();
                     command.Parameters.AddWithValue("@variable", myVariableName);
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-
+                            $end$
                         }
                     }
                 }

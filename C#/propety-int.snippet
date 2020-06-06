@@ -2,10 +2,10 @@
 <CodeSnippets>
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>Public method list string</Title>
+			<Title>Property int</Title>
 			<Author>Patryk Wiśniewski</Author>
-			<Description>Create public method return collection list string</Description>
-			<Shortcut>MeListStringPublic</Shortcut>
+			<Description>Make propety faster</Description>
+			<Shortcut>pint</Shortcut>
 		</Header>
         <Snippet>
             <Declarations>
@@ -27,15 +27,7 @@
                 </Object>
             </Declarations>
             <Code Language="CSharp">
-              
-     <![CDATA[public List<string> ReturnList()
-                       {
-                           List<string> stringCollection = new List<string>();
-
-                           $end$
-
-                           return stringCollection;
-                       }]]>	
+   <![CDATA[public int MyProperty$end$ { get; set; }]]>	
               
             </Code>
 		</Snippet>
