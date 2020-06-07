@@ -10,27 +10,16 @@
         <Snippet>
             <Declarations>
                 <Literal>
-                    <ID>QueryName</ID>
-                    <ToolTip>Replace with proper query.</ToolTip>
-                    <Default>IQuery</Default>
+                    <ID>ActionName</ID>
+                    <ToolTip>Change action name</ToolTip>
+                    <Default>ActionName</Default>
                 </Literal>
-                <Literal>
-                    <ID>MethodName</ID>
-                    <ToolTip>Replace with method name You want to use.</ToolTip>
-                    <Default>Name</Default>
-                </Literal>
-                <Object>
-                    <ID>Route</ID>
-                    <Type>string</Type>
-                    <ToolTip>Replace with a proper Route.</ToolTip>
-                    <Default>Route</Default>
-                </Object>
             </Declarations>
             <Code Language="CSharp">
 	
 <![CDATA[HttpPut]
         [ValidateAntiForgeryToken]
-        public ActionResult ActionName()
+        public ActionResult $ActionName$()
         {
             if (ModelState.IsValid)
             {

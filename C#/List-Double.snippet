@@ -10,27 +10,22 @@
         <Snippet>
             <Declarations>
                 <Literal>
-                    <ID>QueryName</ID>
-                    <ToolTip>Replace with proper query.</ToolTip>
-                    <Default>IQuery</Default>
+                    <ID>collectionInt</ID>
+                    <ToolTip>Change collection name</ToolTip>
+                    <Default>collectionInt</Default>
                 </Literal>
-                <Literal>
-                    <ID>MethodName</ID>
-                    <ToolTip>Replace with method name You want to use.</ToolTip>
-                    <Default>Name</Default>
-                </Literal>
-                <Object>
-                    <ID>Route</ID>
-                    <Type>string</Type>
-                    <ToolTip>Replace with a proper Route.</ToolTip>
-                    <Default>Route</Default>
-                </Object>
             </Declarations>
             <Code Language="CSharp">
 
-              <![CDATA[List<double> collectionInt$end$ = new List<double>(); ]]>
+              <![CDATA[var $collectionInt$ = new List<double>(); 
+              $end$]]>
               
             </Code>
+          <Imports>
+            <Import>
+              <Namespace>System.Collections.Generic</Namespace>
+            </Import>
+          </Imports>
 		</Snippet>
 	</CodeSnippet>
 </CodeSnippets>

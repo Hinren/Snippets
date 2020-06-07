@@ -10,34 +10,33 @@
         <Snippet>
             <Declarations>
                 <Literal>
-                    <ID>QueryName</ID>
-                    <ToolTip>Replace with proper query.</ToolTip>
-                    <Default>IQuery</Default>
+                    <ID>ReturnList</ID>
+                    <ToolTip>Change method name</ToolTip>
+                    <Default>ReturnList</Default>
                 </Literal>
                 <Literal>
-                    <ID>MethodName</ID>
-                    <ToolTip>Replace with method name You want to use.</ToolTip>
-                    <Default>Name</Default>
+                    <ID>stringCollection</ID>
+                    <ToolTip>Change collection name</ToolTip>
+                    <Default>stringCollection</Default>
                 </Literal>
-                <Object>
-                    <ID>Route</ID>
-                    <Type>string</Type>
-                    <ToolTip>Replace with a proper Route.</ToolTip>
-                    <Default>Route</Default>
-                </Object>
             </Declarations>
             <Code Language="CSharp">
               
-<![CDATA[private List<string> ReturnList()
+<![CDATA[private List<string> $ReturnList$()
                  {
-                     List<string> stringCollection = new List<string>();
+                     var $stringCollection$ = new List<string>();
 
                      $end$
 
-                     return stringCollection;
+                     return $stringCollection$;
                  }]]>	
               
             </Code>
+          <Imports>
+            <Import>
+              <Namespace>System.Collections.Generic</Namespace>
+            </Import>
+          </Imports>
 		</Snippet>
 	</CodeSnippet>
 </CodeSnippets>

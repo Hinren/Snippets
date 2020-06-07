@@ -10,27 +10,31 @@
         <Snippet>
             <Declarations>
                 <Literal>
-                    <ID>QueryName</ID>
-                    <ToolTip>Replace with proper query.</ToolTip>
-                    <Default>IQuery</Default>
+                    <ID>ActionNamePost</ID>
+                    <ToolTip>Change action post name</ToolTip>
+                    <Default>ActionNamePost</Default>
                 </Literal>
                 <Literal>
-                    <ID>MethodName</ID>
-                    <ToolTip>Replace with method name You want to use.</ToolTip>
-                    <Default>Name</Default>
+                    <ID>ActionNamePut</ID>
+                    <ToolTip>Change action put name</ToolTip>
+                    <Default>ActionNamePut</Default>
                 </Literal>
-                <Object>
-                    <ID>Route</ID>
-                    <Type>string</Type>
-                    <ToolTip>Replace with a proper Route.</ToolTip>
-                    <Default>Route</Default>
-                </Object>
+              <Literal>
+                <ID>ActionNameDelete</ID>
+                <ToolTip>Change action delete name</ToolTip>
+                <Default>ActionNameDelete</Default>
+              </Literal>
+              <Literal>
+                <ID>ActionNameGet</ID>
+                <ToolTip>Change action get name</ToolTip>
+                <Default>ActionNameGet</Default>
+              </Literal>
             </Declarations>
             <Code Language="CSharp">
 	
 <![CDATA[HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ActionName()
+        public ActionResult $ActionNamePost$()
         {
             if (ModelState.IsValid)
             {
@@ -47,7 +51,7 @@
 
         [HttpPut]
         [ValidateAntiForgeryToken]
-        public ActionResult ActionName()
+        public ActionResult $ActionNamePut$()
         {
             if (ModelState.IsValid)
             {
@@ -61,7 +65,7 @@
         }
 
         [HttpDelete]
-        public ActionResult ActionName()
+        public ActionResult $ActionNameDelete$()
         {
             if (ModelState.IsValid)
             {
@@ -75,10 +79,10 @@
         }
 
         [HttpGet]
-        public ActionResult ActionName()
+        public ActionResult $ActionNameGet$()
         {
 
-            return View(userRegister);
+            return View();
         }]]>	
               
             </Code>

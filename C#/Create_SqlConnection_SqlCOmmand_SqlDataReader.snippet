@@ -10,21 +10,10 @@
         <Snippet>
             <Declarations>
                 <Literal>
-                    <ID>QueryName</ID>
-                    <ToolTip>Replace with proper query.</ToolTip>
-                    <Default>IQuery</Default>
+                    <ID>myVariableName</ID>
+                    <ToolTip>Replace with fields.</ToolTip>
+                  <default>variable</default>
                 </Literal>
-                <Literal>
-                    <ID>MethodName</ID>
-                    <ToolTip>Replace with method name You want to use.</ToolTip>
-                    <Default>Name</Default>
-                </Literal>
-                <Object>
-                    <ID>Route</ID>
-                    <Type>string</Type>
-                    <ToolTip>Replace with a proper Route.</ToolTip>
-                    <Default>Route</Default>
-                </Object>
             </Declarations>
             <Code Language="CSharp">
               
@@ -36,7 +25,7 @@
                 using (SqlCommand command = new SqlCommand(querry,  connection ))
                 {
                     command.Parameters.Clear();
-                    command.Parameters.AddWithValue("@variable", myVariableName);
+                    command.Parameters.AddWithValue("@variable", $myVariableName$);
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
@@ -49,6 +38,11 @@
             }]]>
               
             </Code>
+        <Imports>
+        <Import>
+          <Namespace>System.Data.SqlClient</Namespace>
+        </Import>
+      </Imports>
 		</Snippet>
 	</CodeSnippet>
 </CodeSnippets>
