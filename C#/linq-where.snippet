@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Linq where</Title>
+			<Author>Patryk Wiśniewski</Author>
+			<Description>Insert fragment code where use linq</Description>
+			<Shortcut>linqWhere</Shortcut>
+		</Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>selectedCollection</ID>
+                    <ToolTip>Change selected collection name</ToolTip>
+                    <Default>selectedCollection</Default>
+                </Literal>
+                <Literal>
+                    <ID>collection</ID>
+                    <ToolTip>Write name collection</ToolTip>
+                    <Default>collection</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="CSharp">
+
+   <![CDATA[var $selectedCollection$ = $collection$
+                        .Where(x => x$end$);]]>	
+              
+            </Code>
+          <Imports>
+            <Import>
+              <Namespace>System.Linq</Namespace>
+            </Import>
+            <Import>
+              <Namespace>System.Collections.Generic</Namespace>
+            </Import>
+          </Imports>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
