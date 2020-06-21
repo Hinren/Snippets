@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets>
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Entity framework</Title>
+			<Author>Patryk Wiśniewski</Author>
+			<Description>Create configuration method for entintity framework</Description>
+			<Shortcut>EfCofigurationMethod</Shortcut>
+		</Header>
+        <Snippet>
+          <Declarations>
+            <Object>
+              <ID>ActivityOnWebsite</ID>
+              <Type>class</Type>
+              <ToolTip>Replace with a proper Route.</ToolTip>
+              <Default>ActivityOnWebsite</Default>
+            </Object>
+          </Declarations>
+            <Code Language="CSharp">
+
+   <![CDATA[public void Configure(EntityTypeBuilder<$ActivityOnWebsite$> builder)
+        {
+            builder.HasKey(e => new { e.ActivityOnWebsiteId });
+
+            builder.ToTable("ActivityOnWebsite");
+
+            builder.Property(e => e.ActivityOnWebsiteId)
+                .HasColumnName("ActivityOnWebsiteId")
+                .HasColumnType("int")
+                .IsRequired();
+                }]]>	
+              
+            </Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

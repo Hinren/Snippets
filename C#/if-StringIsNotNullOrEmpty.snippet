@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>If string isn't null or empty</Title>
+      <Author>Patryk Wiśniewski</Author>
+      <Description>Insert if(!IsNullOrEmpty(variable))</Description>
+      <Shortcut>ifStringIsNotNullOrEmpty</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>variable</ID>
+          <ToolTip>Set variable name</ToolTip>
+          <Default>variable</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+
+        <![CDATA[if (!String.IsNullOrEmpty($variable$))
+        {
+          $end$
+        }]]>
+
+      </Code>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
