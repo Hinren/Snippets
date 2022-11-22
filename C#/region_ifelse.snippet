@@ -1,0 +1,26 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>#if-#else directive</Title>
+    <Shortcut>region_ifElse</Shortcut>
+    <Description>#if-#else preprocessor directives</Description>
+    <Author>Patryk Wiśniewski</Author>
+ <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>symbol</ID>
+        <ToolTip>Symbol to evaluate</ToolTip>
+        <Default>DEBUG</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[#if $symbol$
+	$selected$$end$
+#else
+
+#endif]]></Code>
+  </Snippet>
+</CodeSnippet>

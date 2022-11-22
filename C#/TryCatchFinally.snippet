@@ -1,0 +1,39 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>try-catch-finally</Title>
+    <Shortcut>tryCatchFinally</Shortcut>
+    <Description>try-catch-finally</Description>
+    <Author>Patryk Wiśniewski</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>exceptionType</ID>
+        <ToolTip>Exception type</ToolTip>
+        <Default>Exception</Default>
+      </Literal>
+      <Literal>
+        <ID>identifier</ID>
+        <ToolTip>Identifier name</ToolTip>
+        <Default>ex</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[try {
+	$selected$$end$
+}
+catch ($exceptionType$ $identifier$) {
+	throw;
+}
+finally {
+}]]></Code>
+  </Snippet>
+</CodeSnippet>

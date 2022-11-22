@@ -1,0 +1,30 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Description attribute</Title>
+    <Shortcut>AttributeDescription</Shortcut>
+    <Description>Description attribute</Description>
+    <Author>Patryk Wiśniewski</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+      <Keyword>Meta-TitleStartsWithShortcut</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System.ComponentModel</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>description</ID>
+        <ToolTip>Description</ToolTip>
+        <Default>""</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[[Description($description$)]$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

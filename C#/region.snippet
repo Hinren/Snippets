@@ -1,0 +1,23 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>#region directive&lt;T&gt; class</Title>
+    <Shortcut>region</Shortcut>
+    <Description>#region directive</Description>
+    <Author>Patryk Wiśniewski</Author>
+     <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Region name</ToolTip>
+        <Default>RegionName</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[#region $name$
+	$selected$$end$
+#endregion]]></Code>
+  </Snippet>
+</CodeSnippet>

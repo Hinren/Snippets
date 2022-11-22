@@ -1,0 +1,26 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>String variable</Title>
+    <Shortcut>stringVariableDeclaration</Shortcut>
+    <Description>String variable declaration</Description>
+    <Author>Patryk Wiśniewski</Author>
+     <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+<Snippet>
+    <Declarations>
+      <Literal>
+        <ID>identifier</ID>
+        <ToolTip>Identifier name</ToolTip>
+        <Default>s</Default>
+      </Literal>
+      <Literal>
+        <ID>value</ID>
+        <ToolTip>Value to assign</ToolTip>
+        <Default>null</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[string $identifier$ = $value$;$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

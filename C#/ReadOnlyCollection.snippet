@@ -1,0 +1,44 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>ReadOnlyCollection&lt;T&gt; class</Title>
+    <Shortcut>ReadOnlyCollection</Shortcut>
+    <Description>class derived from ReadOnlyCollection&lt;T&gt;</Description>
+    <Author>Patryk Wiśniewski</Author>
+     <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+<Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System.Collections.Generic</Namespace>
+      </Import>
+      <Import>
+        <Namespace>System.Collections.ObjectModel</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>modifier</ID>
+        <ToolTip>Modifier(s)</ToolTip>
+        <Default>public</Default>
+      </Literal>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Collection type name</ToolTip>
+        <Default>Collection</Default>
+      </Literal>
+      <Literal>
+        <ID>type</ID>
+        <ToolTip>Generic type</ToolTip>
+        <Default>object</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : ReadOnlyCollection<$type$> {
+	public $name$(IList<$type$> list) : base(list) {
+	}
+
+	$end$
+}]]></Code>
+  </Snippet>
+</CodeSnippet>

@@ -1,0 +1,30 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>DebuggerDisplay attribute</Title>
+    <Shortcut>AttributeDebuggerDisplay</Shortcut>
+    <Description>DebuggerDisplay attribute</Description>
+    <Author>Patryk Wiśniewski</Author>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Keywords>
+      <Keyword>Meta-NonUniqueShortcut</Keyword>
+      <Keyword>Meta-TitleStartsWithShortcut</Keyword>
+    </Keywords>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System.Diagnostics</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>value</ID>
+        <ToolTip>Value</ToolTip>
+        <Default>"{}"</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[[DebuggerDisplay($value$)]$end$]]></Code>
+  </Snippet>
+</CodeSnippet>

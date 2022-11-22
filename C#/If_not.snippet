@@ -1,0 +1,23 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>if not</Title>
+    <Shortcut>If_not</Shortcut>
+    <Description>if with condition whether the expression is equal to false</Description>
+    <Author>Patryk Wiśniewski</Author>
+<SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>expression</ID>
+        <ToolTip>Expression to evaluate</ToolTip>
+        <Default>x</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp"><![CDATA[if (!$expression$) {
+	$end$
+}]]></Code>
+  </Snippet>
+</CodeSnippet>
