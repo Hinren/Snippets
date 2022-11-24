@@ -1,0 +1,24 @@
+<CodeSnippets>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>IfReturnNull</Title>
+      <Shortcut>If_Return_Null</Shortcut>
+      <Description>IfReturnNull</Description>
+      <Author>Patryk Wiśniewski</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+        <Declarations>
+          <Literal>
+            <ID>expression</ID>
+            <ToolTip>Expression to evaluate</ToolTip>
+            <Default>true</Default>
+          </Literal>
+        </Declarations>
+        <Code Language="CSharp"><![CDATA[if ($expression$)
+        return null;$end$]]></Code>
+      </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

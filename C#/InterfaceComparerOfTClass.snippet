@@ -1,40 +1,43 @@
-<CodeSnippet Format="1.1.0">
-  <Header>
-    <Title>IComparer&lt;T&gt; class</Title>
-    <Shortcut>InterfaceComparerOfTClass</Shortcut>
-    <Description>class that implements IComparer&lt;T&gt;</Description>
-    <Author>Patryk Wiśniewski</Author>
-<SnippetTypes>
-      <SnippetType>Expansion</SnippetType>
-    </SnippetTypes>
-  </Header>
-<Snippet>
-    <Imports>
-      <Import>
-        <Namespace>System</Namespace>
-      </Import>
-      <Import>
-        <Namespace>System.Collections.Generic</Namespace>
-      </Import>
-    </Imports>
-    <Declarations>
-      <Literal>
-        <ID>modifier</ID>
-        <ToolTip>Modifier(s)</ToolTip>
-        <Default>public</Default>
-      </Literal>
-      <Literal>
-        <ID>name</ID>
-        <ToolTip>Comparer type name</ToolTip>
-        <Default>Comparer</Default>
-      </Literal>
-      <Literal>
-        <ID>type</ID>
-        <ToolTip>Type name</ToolTip>
-        <Default>object</Default>
-      </Literal>
-    </Declarations>
-    <Code Language="CSharp"><![CDATA[$modifier$ class $name$ : IComparer<$type$> {
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>IComparer&lt;T&gt; class</Title>
+      <Shortcut>InterfaceComparerOfTClass</Shortcut>
+      <Description>class that implements IComparer&lt;T&gt;</Description>
+      <Author>Patryk Wiśniewski</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>modifier</ID>
+          <ToolTip>Modifier(s)</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Comparer type name</ToolTip>
+          <Default>Comparer</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Type name</ToolTip>
+          <Default>object</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[$modifier$ class $name$ : IComparer<$type$> {
 	public int Compare($type$ x, $type$ y) {
 		if (object.ReferenceEquals(x, y)) {
 			return 0;
@@ -51,6 +54,8 @@
 		$end$
 		throw new NotImplementedException();
 	}
-}]]></Code>
-  </Snippet>
-</CodeSnippet>
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
