@@ -1,0 +1,38 @@
+<CodeSnippets>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>const</Title>
+      <Shortcut>variable_const</Shortcut>
+      <Description>variable_const</Description>
+      <Author>Patryk Wiśniewski</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+        <Declarations>
+          <Literal>
+            <ID>_modifiers</ID>
+            <ToolTip>Modifier(s)</ToolTip>
+            <Default>public</Default>
+          </Literal>
+          <Literal>
+            <ID>_type</ID>
+            <ToolTip>Constant type</ToolTip>
+            <Default>T</Default>
+          </Literal>
+          <Literal>
+            <ID>_value</ID>
+            <ToolTip>Constant value</ToolTip>
+            <Default>default(T)</Default>
+          </Literal>
+          <Literal>
+            <ID>name</ID>
+            <ToolTip>Constant name</ToolTip>
+            <Default>ConstantName</Default>
+          </Literal>
+        </Declarations>
+        <Code Language="CSharp"><![CDATA[$_modifiers$ const $_type$ $name$ = $_value$;$end$]]></Code>
+      </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

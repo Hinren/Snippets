@@ -1,0 +1,56 @@
+<CodeSnippets>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>C Data xml structure</Title>
+      <Shortcut>xml_CDATA</Shortcut>
+      <Description>insert structure to read CData values</Description>
+      <Author>Patryk Wiśniewski</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Xml</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Xml.Serialization</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="CSharp">
+        <![CDATA[[XmlIgnore]
+        public string Content { get; set; }
+
+        [XmlText]
+        public XmlNode[] CDataContent
+        {
+            get
+            {
+                var dummy = new XmlDocument();
+                return new XmlNode[] { dummy.CreateCDataSection(Content) };
+            }
+            set
+            {
+                if (value == null)
+                {
+                    Content = null;
+                    return;
+                }
+
+                if (value.Length != 1)
+                {
+                    throw new InvalidOperationException(
+                        String.Format(
+                            "Invalid array length {0}", value.Length));
+                }
+
+                Content = value[0].Value;
+            }
+        }
+        $end$
+]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

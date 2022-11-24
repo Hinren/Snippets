@@ -1,0 +1,24 @@
+<CodeSnippets>
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>IfReturnSomething</Title>
+      <Shortcut>If_Return_something</Shortcut>
+      <Description>IfReturnSomething</Description>
+      <Author>Patryk Wiśniewski</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+        <Declarations>
+          <Literal>
+            <ID>expression</ID>
+            <ToolTip>Expression to evaluate</ToolTip>
+            <Default>true</Default>
+          </Literal>
+        </Declarations>
+        <Code Language="CSharp"><![CDATA[if ($expression$)
+        return;$end$]]></Code>
+      </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
